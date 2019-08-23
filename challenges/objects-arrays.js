@@ -12,6 +12,7 @@ const tyrannosaurus = {
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceous',
+  
 }
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -76,6 +77,12 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 const universities = [];
 graduates.forEach(function (grad){
   return universities.push(grad.university);
+})
+
+const universities = [];
+graduates.forEach(() => {
+  universities.push(names).universities);
+  return universities.sort();
 })
 
 universities.sort();
