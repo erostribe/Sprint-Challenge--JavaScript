@@ -81,7 +81,7 @@ graduates.forEach(function (grad){
 
 const universities = [];
 graduates.forEach(() => {
-  universities.push(names).universities);
+  universities.push(names).universities;
   return universities.sort();
 })
 
