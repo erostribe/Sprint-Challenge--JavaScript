@@ -6,39 +6,43 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-function consume(param1, param2, cb){
-  return cb (param1, param2);
+function highOrderFunction(parameter1, parameter2, cb) {
+  return cb(parameter1, parameter2);
 }
-
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(num1, num2){
-  return num1 + num2;
-}
 
-function multiply(num1, num2){
-  return num1 * num2;
+function add(parameter1, parameter2) {
+  return (parameter1 + parameter2);
 }
+console.log(add(30, 48))
 
-function greeting(firstName, lastName){
-  return `Hello ${firstName} ${lastName}, nice to meet you!`
+function multiply(parameter1, parameter2) {
+  return (parameter1 * parameter2);
 }
+console.log(multiply(30, 48))
+
+function greeting(parameter1, parameter2) {
+  return (`Hello ${parameter1} ${parameter2}  nice to meet you!`)
+}
+console.log(greeting("James", "Starks"));
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-consume(2,2,add); // 4
-consume(10,16,multiply); // 160
-consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+highOrderFunction(2, 2, add); // 4
+highOrderFunction(10, 16, multiply); // 160
+highOrderFunction("Mary", "Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: nestedfucntion() is a is a child of myFunction so it can access any variable that was made in the functions its nested inside.
+// Explanation: Because of closure or better put, 'enclosure' it is part of the same lexical 
+//              environment due to being created within another function.
 
 
 const external = "I'm outside the function";
